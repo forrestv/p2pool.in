@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>P2Pool - The official homepage of the P2Pool software</title>
+<link rel="shortcut icon" href="/favicon.png">
+<style>
+body{
+	font-family:"Helvetica Neue", "Helvetica", Arial, sans-serif;
+	font-size:16px;
+	padding:0;
+	margin:0;
+	color:#646464;
+}
+p{
+	line-height:1.5em;
+}
+h1{
+	font-size:200%;
+	position:relative;
+}
+h2{
+	font-size:150%;
+}
+h3{
+	font-size:140%;
+	font-weight:normal;
+}
+h4{
+	font-size:120%;
+	font-weight:normal;
+}
+h5{
+	font-size:100%;
+	font-weight:normal;
+}
+h1 a,
+h1 a:link,
+h1 a:visited,
+h1 a:link:hover,
+h1 a:visited:hover,
+h2 a,
+h2 a:link,
+h2 a:visited,
+h2 a:link:hover,
+h2 a:visited:hover{
+	color:#646464;
+}
+a:link,
+a:visited{
+	color:#4F4FA7;
+	text-decoration:none;
+}
+a:link:hover,
+a:visited:hover{
+	color:#232399;
+}
+a img,
+a:link img,
+a:visited img{
+	border:0;
+}
+blockquote{
+	margin-left:0;
+	margin-bottom:18px;
+	border-left:5px solid #eee;
+	padding-left:15px;
+}
+pre{
+	font-size:80%;
+	background-color:#f0f0f0;
+	border:1px solid #ccc;
+	padding:16px;
+	line-height:18px;
+	white-space:pre-wrap;
+	word-wrap:break-word;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+}
+ul{
+	margin-left:18px;
+	padding-left:0;
+	line-height:1.5em;
+}
+.num{
+	font-size:160%;
+	font-weight:bold;
+}
+.box{
+	max-width:900px;
+	margin:0 auto;
+}
+.boxwhite{
+	padding:1px;
+	background-color:#fff;
+	border-bottom:1px solid #E2E2E2;
+}
+.boxgrey{
+	padding:1px;
+	background-color:#f7f7f7;
+	border-bottom:1px solid #E2E2E2;
+}
+.boxhead{
+	position:relative;
+}
+.boxexpand{
+	overflow:hidden;
+	margin:20px 0;
+}
+.boxexpand>*{
+	display:none;
+}
+.boxexpand{
+	border-bottom:1px transparent solid;
+	border-top:1px transparent solid;
+}
+.boxexpand>h4:first-child{
+	display:block;
+	margin:0;
+}
+.boxexpand>h4:first-child a:link,
+.boxexpand>h4:first-child a:visited,
+.boxexpand>h4:first-child a:active{
+	text-decoration:none;
+}
+.logo{
+	position:absolute;
+	top:-28px;
+	left:26px;
+}
+.menu{
+	font-size:120%;
+	position:absolute;
+	left:130px;
+	top:3px;
+}
+.menu a,
+.menu a:link,
+.menu a:active,
+.menu a:visited{
+	display:inline-block;
+	margin-right:6px;
+	color:#4F4FA7;
+	text-decoration:none;
+	padding:6px 12px;
+	border:1px solid transparent;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	border-radius:6px;
+}
+.menu a:hover{
+	background-color:#FBFBFB;
+	border:1px solid #F3F3F3;
+	color:#232399;
+}
+.screenshots{
+	position:relative;
+}
+.screenshots>div{
+	display:inline-block;
+	opacity:0.6;
+	-moz-transition:opacity 400ms ease-out;
+	-webkit-transition:opacity 400ms ease-out;
+	transition:opacity 400ms ease-out;
+}
+.screenshots>div:hover{
+	opacity:1;
+}
+.screenshots>div>img{
+	width:120px;
+	height:120px;
+}
+.screenshots>div>div{
+	bottom:150px;
+	left:0;
+	right:0;
+	width:0;
+	height:0;
+	text-align:center;
+	overflow:hidden;
+	position:absolute;
+	opacity:0;
+	-moz-transition:opacity 400ms ease-out;
+	-webkit-transition:opacity 400ms ease-out;
+	transition:opacity 400ms ease-out;
+}
+.screenshots>div:hover>div{
+	width:auto;
+	height:auto;
+	opacity:1;
+}
+.screenshots>div>div>div{
+	display:inline-block;
+	padding:40px;
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfeAQwWKCGaySDBAAAAC0lEQVQI12NgMAYAADYANKFKfTUAAAAASUVORK5CYII=);
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+.screenshots>div>div>div>img{
+	width:auto;
+	height:auto;
+}
+</style>
+<!--[if lt IE 8]>
+/*Minimum IE7 support*/
+<style>
+.menu a,
+.menu a:link,
+.menu a:active,
+.menu a:visited{
+	display:inline;
+	zoom:1;
+}
+.screenshots>div{
+	display:inline;
+	zoom:1;
+}
+.screenshots>div>div>div{
+	display:inline;
+	zoom:1;
+}
+</style>
+<![endif]-->
+<script>
+function generatePassword() {
+	//Generate random password.
+	var length = 100,
+		charset = "abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+		retVal = "";
+	for (var i = 0; i < length; ++i) {
+		retVal += charset.charAt(Math.floor(Math.random() * charset.length));
+	}
+	return retVal;
+}
+function getEventTarget(e){
+	//Return target DOM node on which the event is triggered.
+	//Ex. getEventTarget(event);
+	if(!e)var e=window.event;return (e.target&&e.target.nodeType==3)?e.target.parentNode:(e.target)?e.target:e.srcElement;
+}
+function cancelEvent(e){
+	//Cancel current event.
+	//Ex. cancelEvent(event);
+	if(!e)var e=window.event;(e.preventDefault)?e.preventDefault():e.returnValue=false;
+}
+function getStyle(a,b){
+	//Return the value of the computed style on a DOM node.
+	//Ex. getStyle(node,'padding-bottom');
+	if(window.getComputedStyle)return document.defaultView.getComputedStyle(a,null).getPropertyValue(b);
+	var n=b.indexOf('-');
+	if(n!==-1)b=b.substr(0,n)+b.substr(n+1,1).toUpperCase()+b.substr(n+2);
+	return a.currentStyle[b];
+}
+function getHeight(a){
+	//Return the integer value of the computed height of a DOM node.
+	//Ex. getHeight(node);
+	var h=getStyle(a,'height');
+	if(h.indexOf('px')!==-1)return parseInt(h.replace('px',''));
+	var p=[getStyle(a,'padding-top'),getStyle(a,'padding-right'),getStyle(a,'padding-bottom'),getStyle(a,'padding-left')];
+	for(var i=0;i<4;i++){
+		if(p[i].indexOf('px')!==-1)p[i]=parseInt(p[i]);
+		else p[i]=0;
+	}
+	return Math.max(0,a.offsetHeight-p[0]-p[2]);
+}
+function boxShow(e){
+	//Display the box content when the user click a box on the "Miners" subsection.
+	var p=t=getEventTarget(e);
+	while(p.nodeName!='DIV')p=p.parentNode;
+	var sh=getHeight(p);
+	for(var i=0,nds=p.childNodes,n=nds.length;i<n;i++)if(nds[i].nodeType==1)nds[i].style.display='block';
+	t.removeAttribute('href');
+	t.onclick='';
+	var dh=getHeight(p);
+	p.style.height=sh+'px';
+	setTimeout(function(){
+		p.style.transition='height 400ms ease-out';
+		p.style.MozTransition='height 400ms ease-out';
+		p.style.WebkitTransition='height 400ms ease-out';
+		setTimeout(function(){
+			p.style.height=dh+'px';
+			setTimeout(function(){
+				p.style.transition='';
+				p.style.MozTransition='';
+				p.style.WebkitTransition='';
+				setTimeout(function(){
+					p.style.overflow='visible';
+					p.style.height='auto';
+				},20);
+			},500);
+		},20);
+	},20);
+	cancelEvent(e);
+}
+</script>
+</head>
+
+<body>
+
+<div class="boxgrey"><div class="box boxhead">
+  <img src="/img/icon-network.png" class="logo" alt="logo">
+  <h1><a href="/">P2Pool</a></h1>
+  <div class="menu"><a href="#download">Download</a><a href="#getting-started">Getting started</a><a href="#faq">FAQ</a><a href="#links">Links</a></div>
+</div></div>
+
+<div class="boxwhite"><div class="box">
+  <h2><a id="what-is-p2pool">What is P2Pool?</a></h2>
+  <p>P2Pool is a <a href="https://en.bitcoin.it/wiki/P2Pool">decentralized Bitcoin mining pool</a> that works by creating a peer-to-peer network of miner nodes.</p>
+  <p>As opposed to usual pools, P2Pool helps securing Bitcoin against double-spending and 51% attacks. P2Pool's initial setup requires a little more effort but provides equivalent payouts with a higher variance and no need for trust in a pool operator.</p>
+</div></div>
+
+<div class="boxgrey"><div class="box">
+  <h2><a id="download">Download P2Pool</a></h2>
+
+  <h3><img src="/img/windows.png" alt="Windows"> Windows</h3>
+  <p>Download the newest version from the Windows binaries: <a href="http://u.forre.st/u/wftncvpn/p2pool_win32_13.4.zip">p2pool_win32_13.4.zip</a> <a href="http://u.forre.st/u/eoietnxc/p2pool_win32_13.4.zip.sig">.sig</a><br>You can also download the source as a <a href="https://github.com/forrestv/p2pool/releases">tar/zipballs on GitHub</a>.</p>
+
+  <h3><img src="/img/linux.png" alt="Linux"> Linux</h3>
+  <p>Using git is preferable, but you can also download <a href="https://github.com/forrestv/p2pool/releases">tar/zipballs on GitHub</a>.</p>
+<pre>
+sudo apt-get install git # if git is not installed
+git clone https://github.com/forrestv/p2pool.git
+</pre>
+  <p>The following dependencies must be installed:</p>
+  <ul>
+    <li>Python &gt;=2.6</li>
+    <li>Twisted &gt;=10.0.0</li>
+    <li>python-argparse (for Python =2.6)</li>
+  </ul>
+<pre>
+sudo apt-get install python-twisted python-argparse # should work on Ubuntu
+</pre>
+</div></div>
+
+<div class="boxwhite"><div class="box">
+  <h2><a id="getting-started">Getting started</a></h2>
+  <p>Setting up a working P2Pool mostly consist of:
+  <ul>
+    <li>Running a Bitcoin node (Bitcoin-Qt or bitcoind).</li>
+    <li>Running P2Pool on the same machine (will fetch blocks data from bitcoind).</li>
+    <li>Running Bitcoin miners (will fetch work from P2Pool).</li>
+  </ul>
+
+  <h3><span class="num">1.</span> Setup Bitcoin-Qt or bitcoind</h3>
+  <p>Download and install <a href="http://bitcoin.org/en/download">Bitcoin-Qt or bitcoind</a>. Initial synchronization will likely take more than a day to complete. For this reason, it is generally a good idea to complete this step in advance.</p>
+  <p>Insert the following text into bitcoin.conf and restart Bitcoin-Qt or bitcoind:</p>
+<pre>
+server=1
+rpcuser=bitcoinrpc
+rpcpassword=<span id="password">(random data)</span>
+</pre>
+  <script>document.getElementById('password').innerHTML=generatePassword();</script>
+  <div class="boxexpand">
+    <h4><a href="#" onclick="boxShow(event);">Example for Windows</a></h4>
+    <p>bitcoin.conf can be found in the following folder: %AppData%\Bitcoin</p>
+    <div class="screenshots">
+      <div><img src="/img/screenshots/thumb_bitcoind_windows_01.png" alt="thumbnail"><div><div><img src="/img/screenshots/bitcoind_windows_01.png" alt="screenshot"></div></div></div>
+      <div><img src="/img/screenshots/thumb_bitcoind_windows_02.png" alt="thumbnail"><div><div><img src="/img/screenshots/bitcoind_windows_02.png" alt="screenshot"></div></div></div>
+      <div><img src="/img/screenshots/thumb_bitcoind_windows_03.png" alt="thumbnail"><div><div><img src="/img/screenshots/bitcoind_windows_03.png" alt="screenshot"></div></div></div>
+      <div><img src="/img/screenshots/thumb_bitcoind_windows_04.png" alt="thumbnail"><div><div><img src="/img/screenshots/bitcoind_windows_04.png" alt="screenshot"></div></div></div>
+      <div><img src="/img/screenshots/thumb_bitcoind_windows_05.png" alt="thumbnail"><div><div><img src="/img/screenshots/bitcoind_windows_05.png" alt="screenshot"></div></div></div>
+      <div><img src="/img/screenshots/thumb_bitcoind_windows_06.png" alt="thumbnail"><div><div><img src="/img/screenshots/bitcoind_windows_06.png" alt="screenshot"></div></div></div>
+      <div><img src="/img/screenshots/thumb_bitcoind_windows_07.png" alt="thumbnail"><div><div><img src="/img/screenshots/bitcoind_windows_07.png" alt="screenshot"></div></div></div>
+    </div>
+  </div>
+  <div class="boxexpand">
+    <h4><a href="#" onclick="boxShow(event);">Example for Linux</a></h4>
+    <p>bitcoin.conf can be found in the following folder: ~/.bitcoin</p>
+    <div class="screenshots">
+      <div><img src="/img/screenshots/thumb_bitcoind_linux_01.png" alt="thumbnail"><div><div><img src="/img/screenshots/bitcoind_linux_01.png" alt="screenshot"></div></div></div>
+      <div><img src="/img/screenshots/thumb_bitcoind_linux_02.png" alt="thumbnail"><div><div><img src="/img/screenshots/bitcoind_linux_02.png" alt="screenshot"></div></div></div>
+      <div><img src="/img/screenshots/thumb_bitcoind_linux_03.png" alt="thumbnail"><div><div><img src="/img/screenshots/bitcoind_linux_03.png" alt="screenshot"></div></div></div>
+      <div><img src="/img/screenshots/thumb_bitcoind_linux_04.png" alt="thumbnail"><div><div><img src="/img/screenshots/bitcoind_linux_04.png" alt="screenshot"></div></div></div>
+    </div>
+  </div>
+
+  <h3><span class="num">2.</span> Run P2Pool</h3>
+  <p><a href="#download">Download P2Pool</a> and execute run_p2pool.exe (Windows) or run_p2pool.py (Linux/source).</p>
+  <p>P2Pool will start downloading the sharechain, displaying sections like this occasionally:</p>
+<pre>
+2014-01-09 17:15:45.075550 P2Pool: 0 shares in chain (0 verified/3133 total) Peers: 5 (0 incoming)
+2014-01-09 17:15:45.075662  Local: 0H/s in last 0.0 seconds Local dead on arrival: ??? Expected time to share: ???
+</pre>
+  <p>Within a few minutes should start showing sections like this (notice the pool hashrate - Pool: 115TH/s - is now shown), indicating the the sharechain has finished downloading. As you can see from the timestamps, here it took about one and a half minutes. It will vary depending on your CPU speed and Internet bandwidth.</p>
+<pre>
+2014-01-09 17:16:49.525335 P2Pool: 8698 shares in chain (57 verified/8698 total) Peers: 5 (0 incoming)
+2014-01-09 17:16:49.525422  Local: 0H/s in last 0.0 seconds Local dead on arrival: ??? Expected time to share: ???
+2014-01-09 17:16:49.525476  Shares: 0 (0 orphan, 0 dead) Stale rate: ??? Efficiency: ??? Current payout: 0.0000 BTC
+2014-01-09 17:16:49.525510  Pool: 115TH/s Stale rate: 12.4% Expected time to block: 14.7 hours
+</pre>
+
+  <h3><span class="num">3.</span> Run miners</h3>
+  <p>Just point miners to http://HOST:9332/ with HOST being the IP address of the computer running P2Pool. The username can be your payout Bitcoin address or anything that describes the miner if you prefer to mine into your Bitcoin-Qt/bitcoind wallet. Use any password; it is ignored by P2Pool. When mining on the same machine, you can use 127.0.0.1 as the P2Pool host.</p>
+  <div class="boxexpand">
+    <h4><a href="#" onclick="boxShow(event);">ButterflyLabs EasyMiner</a></h4>
+    <p>Easyminer can be downloaded <a href="http://butterflylabs.com/drivers/">here</a>.</p>
+    <p>
+      <img src="/img/screenshots/bfl_easyminer_01.png" alt="screenshot">
+    </p>
+  </div>
+  <div class="boxexpand">
+    <h4><a href="#" onclick="boxShow(event);">bfgminer</a></h4>
+    <blockquote>
+    <div class="boxexpand">
+      <h4><a href="#" onclick="boxShow(event);">Linux</a></h4>
+      <p>Downloading and building bfgminer from the terminal:</p>
+<pre>
+sudo apt-get install git build-essential autoconf automake libtool pkg-config libcurl4-gnutls-dev libjansson-dev uthash-dev libncursesw5-dev libudev-dev libusb-1.0-0-dev libevent-dev libmicrohttpd-dev
+git clone git://github.com/luke-jr/bfgminer.git
+cd bfgminer
+./autogen.sh
+./configure
+make
+</pre>
+      <p>Running bfgminer from the terminal:</p>
+<pre>
+./bfgminer -o http://127.0.0.1:9332 -u user -p password
+</pre>
+    </div>
+    <div class="boxexpand">
+      <h4><a href="#" onclick="boxShow(event);">Windows</a></h4>
+      <p>Binaries for Windows (32bit and 64bit) can be downloaded <a href="http://luke.dashjr.org/programs/bitcoin/files/bfgminer/latest/">here</a>.</p>
+      <p>You can run bfgminer from the command line:</p>
+<pre>
+bfgminer.exe -o http://127.0.0.1:9332 -u user -p password
+</pre>
+      <p>Or you can create a preconfigured shortcut on the desktop:</p>
+      <div class="screenshots">
+        <div><img src="/img/screenshots/thumb_bfgminer_windows_shortcut_01.png" alt="thumbnail"><div><div><img src="/img/screenshots/bfgminer_windows_shortcut_01.png" alt="screenshot"></div></div></div>
+        <div><img src="/img/screenshots/thumb_bfgminer_windows_shortcut_02.png" alt="thumbnail"><div><div><img src="/img/screenshots/bfgminer_windows_shortcut_02.png" alt="screenshot"></div></div></div>
+        <div><img src="/img/screenshots/thumb_bfgminer_windows_shortcut_03.png" alt="thumbnail"><div><div><img src="/img/screenshots/bfgminer_windows_shortcut_03.png" alt="screenshot"></div></div></div>
+      </div>
+    </div>
+    </blockquote>
+  </div>
+  <div class="boxexpand">
+    <h4><a href="#" onclick="boxShow(event);">cgminer</a></h4>
+<pre>
+cgminer --url http://127.0.0.1:9332/ --userpass cgminer:password
+</pre>
+  </div>
+  <div class="boxexpand">
+    <h4><a href="#" onclick="boxShow(event);">Avalon</a></h4>
+    <p>
+      <img src="/img/screenshots/avalon_01.png" alt="screenshot">
+    </p>
+  </div>
+  <div class="boxexpand">
+    <h4><a href="#" onclick="boxShow(event);">Bitfury / Megabigpower</a></h4>
+    <p>See the last question of <a href="https://megabigpower.com/shop/index.php?route=information/contact">this FAQ</a>.</p>
+  </div>
+
+  <h3><span class="num">4.</span> Watch</h3>
+  <p>Unless your miners have Bitcoin addresses as usernames, payouts will go to Bitcoin-Qt/bitcoind's wallet. You can look at P2Pool's web interface, which has statistics and graphs, by going to http://YOUR_P2POOL_HOST:9332/ in a browser - <a href="http://127.0.0.1:9332/">http://127.0.0.1:9332/</a> if you're looking at this tutorial on the same host that P2Pool is running.</p>
+</div></div>
+
+<div class="boxgrey"><div class="box">
+  <h2><a id="faq">FAQ</a></h2>
+
+  <h4>What are the requirements to run P2Pool?</h4>
+  <p>A PC with enough memory to run Bitcoin-Qt. A good Internet connection with low latency greatly helps to increase efficiency. A miner supporting getwork or Stratum interfaces (more than 40GH/s advised).</p>
+
+  <h4>What are P2Pool's fees?</h4>
+  <p>By default, P2Pool receives 1% to fund P2Pool's development. This fee is optional, but very welcome and useful.</p>
+
+  <h4>How good are P2Pool payouts?</h4>
+  <p>Payouts should be the same as other pools with a higher variance (payouts are unconsistently smaller or larger days after days). Payouts can even be slightly higher because blocks propagation time is sometime faster on P2Pool. It also happens that people are sending bitcoins to P2Pool miners to encourage miners to support P2Pool.</p>
+
+  <h4>What are the advantages of using P2Pool?</h4>
+  <ul>
+    <li>Small statistical advantages increasing income</li>
+    <li>Control over your own pool node</li>
+    <li>No need to trust a pool operator</li>
+    <li>Immediate payments</li>
+    <li>Helps protecting and keeping the Bitcoin network decentralized</li>
+  </ul>
+
+  <h4>What are the disadvantages of using P2Pool?</h4>
+  <ul>
+    <li>Initial setup is a little more complicate</li>
+    <li>More CPU / RAM / Internet bandwidth required</li>
+    <li>Higher payout variance</li>
+    <li>Small transaction fees when spending if you receive many small payouts</li>
+  </ul>
+
+  <h4>Why does P2Pool have so much orphaned / dead / rejected shares?</h4>
+  <p>Miners' payouts are not affected so long as they have a proportional number of rejected shares to other miners. A new share is found every 30 seconds on average with P2Pool's sharechain. This means reorganizations happen more often and miners must have a good network connection in order to receive last shares within a short time.</p>
+
+  <h4>How to mine with Litecoin?</h4>
+  <p>You should go through the <a href="#getting-started">same steps</a> as if you were mining with Bitcoin, except that you should:</p>
+  <ul>
+   <li>Install Litecoin instead of Bitcoin.</li>
+   <li>Provide the "--net litecoin" option to run_p2pool.</li>
+   <li>Use port 9327 with your miner.</li>
+  </ul>
+</div></div>
+
+<div class="boxwhite"><div class="box">
+  <h2><a id="links">Useful links</a></h2>
+  <p><a href="https://en.bitcoin.it/wiki/P2Pool">Bitcoin wiki page</a></p>
+  <p><a href="https://bitcointalk.org/index.php?topic=18313">Bitcoin forum thread</a></p>
+  <p><a href="https://github.com/forrestv/p2pool">GitHub page</a></p>
+  <p><a href="http://p2pool.info/">Pool statistics</a></p>
+</div></div>
+
+<div class="boxgrey"><div class="box">
+  <h2><a id="sponsors">Sponsors</a></h2>
+  <p>Thanks to the <a href="https://bitcoinfoundation.org/">Bitcoin Foundation</a> for its generous support of P2Pool.</p>
+  <p>Thanks to the <a href="https://litecoin.org/">Litecoin Project</a> for its generous donations to P2Pool.</p>
+</div></div>
+
+</body></html>
