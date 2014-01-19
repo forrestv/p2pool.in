@@ -184,9 +184,11 @@ ul{
 	-webkit-transition:opacity 400ms ease-out;
 	transition:opacity 400ms ease-out;
 }
-.screenshots>div:hover>div{
+.screenshots:hover>div>div{
 	width:auto;
 	height:auto;
+}
+.screenshots>div:hover>div{
 	opacity:1;
 }
 .screenshots>div>div>div{
@@ -196,10 +198,6 @@ ul{
 	-webkit-border-radius:10px;
 	-moz-border-radius:10px;
 	border-radius:10px;
-}
-.screenshots>div>div>div>img{
-	width:auto;
-	height:auto;
 }
 </style>
 <!--[if lt IE 8]>
@@ -219,6 +217,16 @@ ul{
 .screenshots>div>div>div{
 	display:inline;
 	zoom:1;
+}
+</style>
+<![endif]-->
+<!--[if lt IE 9]>
+<style>
+.screenshots>div>div{
+	visibility:hidden;
+}
+.screenshots>div:hover>div{
+	visibility:visible;
 }
 </style>
 <![endif]-->
