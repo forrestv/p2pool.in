@@ -328,16 +328,38 @@ function boxShow(e){
 <pre>
 sudo apt-get install git # if git is not installed
 git clone https://github.com/forrestv/p2pool.git
+cd p2pool
+make
 </pre>
-  <p>The following dependencies must be installed:</p>
+  <p>The following packages are required, and will be automatically installed when you run 'make':</p>
   <ul>
     <li>Python &gt;=2.6</li>
     <li>Twisted &gt;=10.0.0</li>
     <li>python-argparse (for Python =2.6)</li>
   </ul>
+  <p>If for whatever reason you need to install them manually:
 <pre>
 sudo apt-get install python-twisted python-argparse # should work on Ubuntu
 </pre>
+
+<h3><img src="/img/apple.png" alt="Mac OS X"> Mac OS X</h3>
+  <p>Using git is preferable, but you can also download <a href="https://github.com/forrestv/p2pool/releases">tar/zipballs on GitHub</a>.</p>
+  <p>You can download git for OS X from <a href="http://git-scm.com/download/mac">the official Git site</a>, or install it with Homebrew:
+<pre>
+brew install git
+</pre>
+  <p>Then download and install p2pool:
+<pre>
+git clone https://github.com/forrestv/p2pool.git
+cd p2pool
+make
+</pre>
+  <p>The following packages are required, and will be automatically installed when you run 'make':</p>
+  <ul>
+    <li>Python &gt;=2.6</li>
+    <li>Twisted &gt;=10.0.0</li>
+    <li>python-argparse (for Python =2.6)</li>
+  </ul>
 </div></div>
 
 <div class="boxwhite"><div class="box">
@@ -383,7 +405,7 @@ rpcpassword=<span id="password">(random data)</span>
   </div>
 
   <h3><span class="num">2.</span> Run P2Pool</h3>
-  <p><a href="#download">Download P2Pool</a> and execute run_p2pool.exe (Windows) or run_p2pool.py (Linux/source).</p>
+  <p><a href="#download">Download P2Pool</a> and execute run_p2pool.exe (Windows) or 'make run' (Linux/OS X/source).</p>
   <p>P2Pool will start downloading the sharechain, displaying sections like this occasionally:</p>
 <pre>
 2014-01-09 17:15:45.075550 P2Pool: 0 shares in chain (0 verified/3133 total) Peers: 5 (0 incoming)
