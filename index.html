@@ -314,14 +314,14 @@ function boxShow(e){
 <div class="boxwhite"><div class="box">
   <h2><a id="what-is-p2pool">What is P2Pool?</a></h2>
   <p>P2Pool is a <a href="https://en.bitcoin.it/wiki/P2Pool">decentralized Bitcoin mining pool</a> that works by creating a peer-to-peer network of miner nodes.</p>
-  <p>As opposed to usual pools, P2Pool helps securing Bitcoin against double-spending and 51% attacks. P2Pool's initial setup requires a little more effort but provides equivalent payouts with a higher variance and no need for trust in a pool operator.</p>
+  <p>As opposed to usual pools, P2Pool helps to secure Bitcoin against double-spending and 51% attacks. P2Pool's initial setup requires a little more effort but provides equivalent payouts with a higher variance and no need for trust in a pool operator.</p>
 </div></div>
 
 <div class="boxgrey"><div class="box">
   <h2><a id="download">Download P2Pool</a></h2>
 
   <h3><img src="/img/windows.png" alt="Windows"> Windows</h3>
-  <p>Download the newest version from the Windows binaries: <a href="http://u.forre.st/u/wftncvpn/p2pool_win32_13.4.zip">p2pool_win32_13.4.zip</a> <a href="http://u.forre.st/u/eoietnxc/p2pool_win32_13.4.zip.sig">.sig</a><br>You can also download the source as a <a href="https://github.com/forrestv/p2pool/releases">tar/zipballs on GitHub</a>.</p>
+  <p>Download the newest version from the Windows binaries: <a href="http://u.forre.st/u/wftncvpn/p2pool_win32_13.4.zip">p2pool_win32_13.4.zip</a> <a href="http://u.forre.st/u/eoietnxc/p2pool_win32_13.4.zip.sig">.sig</a><br>You can also download the source as <a href="https://github.com/forrestv/p2pool/releases">tar/zipballs on GitHub</a>.</p>
 
   <h3><img src="/img/linux.png" alt="Linux"> Linux</h3>
   <p>Using git is preferable, but you can also download <a href="https://github.com/forrestv/p2pool/releases">tar/zipballs on GitHub</a>.</p>
@@ -411,7 +411,7 @@ rpcpassword=<span id="password">(random data)</span>
 2014-01-09 17:15:45.075550 P2Pool: 0 shares in chain (0 verified/3133 total) Peers: 5 (0 incoming)
 2014-01-09 17:15:45.075662  Local: 0H/s in last 0.0 seconds Local dead on arrival: ??? Expected time to share: ???
 </pre>
-  <p>Within a few minutes should start showing sections like this (notice the pool hashrate - Pool: 115TH/s - is now shown), indicating the the sharechain has finished downloading. As you can see from the timestamps, here it took about one and a half minutes. It will vary depending on your CPU speed and Internet bandwidth.</p>
+  <p>Within a few minutes, it should start showing sections like this (notice the pool hashrate - Pool: 115TH/s - is now shown), indicating that the sharechain has finished downloading. As you can see from the timestamps, here it took about one and a half minutes. It will vary depending on your CPU speed and Internet bandwidth.</p>
 <pre>
 2014-01-09 17:16:49.525335 P2Pool: 8698 shares in chain (57 verified/8698 total) Peers: 5 (0 incoming)
 2014-01-09 17:16:49.525422  Local: 0H/s in last 0.0 seconds Local dead on arrival: ??? Expected time to share: ???
@@ -488,13 +488,17 @@ cgminer --url http://127.0.0.1:9332/ --userpass cgminer:password
   <h2><a id="faq">FAQ</a></h2>
 
   <h4>What are the requirements to run P2Pool?</h4>
-  <p>A PC with enough memory to run Bitcoin-Qt. A good Internet connection with low latency greatly helps to increase efficiency. A miner supporting getwork or Stratum interfaces (more than 40GH/s advised).</p>
+  <ul>
+    <li>A PC with enough memory to run Bitcoin-Qt</li>
+    <li>A good Internet connection with low latency greatly helps to increase efficiency</li>
+    <li>A miner supporting getwork or Stratum interfaces (more than 40GH/s advised)</li>
+  </ul>
 
   <h4>What are P2Pool's fees?</h4>
   <p>By default, P2Pool receives 1% to fund P2Pool's development. This fee is optional, but very welcome and useful.</p>
 
   <h4>How good are P2Pool payouts?</h4>
-  <p>Payouts should be the same as other pools with a higher variance (payouts are unconsistently smaller or larger days after days). Payouts can even be slightly higher because blocks propagation time is sometime faster on P2Pool. It also happens that people are sending bitcoins to P2Pool miners to encourage miners to support P2Pool.</p>
+  <p>Payouts should be the same as other pools with a higher variance (payouts are inconsistently smaller or larger days after days). Payouts can even be slightly higher because blocks propagation time is sometime faster on P2Pool. It also happens that people are sending bitcoins to P2Pool miners to encourage miners to support P2Pool.</p>
 
   <h4>What are the advantages of using P2Pool?</h4>
   <ul>
@@ -502,18 +506,18 @@ cgminer --url http://127.0.0.1:9332/ --userpass cgminer:password
     <li>Control over your own pool node</li>
     <li>No need to trust a pool operator</li>
     <li>Immediate payments</li>
-    <li>Helps protecting and keeping the Bitcoin network decentralized</li>
+    <li>Helps to protect and keep the Bitcoin network decentralized</li>
   </ul>
 
   <h4>What are the disadvantages of using P2Pool?</h4>
   <ul>
-    <li>Initial setup is a little more complicate</li>
+    <li>Initial setup is a little more complicated</li>
     <li>More CPU / RAM / Internet bandwidth required</li>
     <li>Higher payout variance</li>
     <li>Small transaction fees when spending if you receive many small payouts</li>
   </ul>
 
-  <h4>Why does P2Pool have so much orphaned / dead / rejected shares?</h4>
+  <h4>Why does P2Pool have so many orphaned / dead / rejected shares?</h4>
   <p>Miners' payouts are not affected so long as they have a proportional number of rejected shares to other miners. A new share is found every 30 seconds on average with P2Pool's sharechain. This means reorganizations happen more often and miners must have a good network connection in order to receive last shares within a short time.</p>
 
   <h4>How to mine with Litecoin?</h4>
