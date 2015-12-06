@@ -311,6 +311,30 @@ function boxShow(e){
   <div class="menu"><a href="#download">Download</a><a href="#getting-started">Getting started</a><a href="#faq">FAQ</a><a href="#links">Links</a></div>
 </div></div>
 
+<div class="box" style="border: 2px solid red;margin-top:1em;padding: 0 1em">
+<h2>URGENT: Upgrade required</h2>
+<p>HARDFORK - Upgrade URGENTLY required in the next 24 hours.</p>
+
+<pre>
+Windows binary: <a href="http://u.forre.st/u/dosjhkch/p2pool_win32_14.0.zip">http://u.forre.st/u/dosjhkch/p2pool_win32_14.0.zip</a>
+Windows binary signature: <a href="http://u.forre.st/u/mvuofxtx/p2pool_win32_14.0.zip.sig">http://u.forre.st/u/mvuofxtx/p2pool_win32_14.0.zip.sig</a>
+Source zipball: <a href="https://github.com/forrestv/p2pool/zipball/14.0">https://github.com/forrestv/p2pool/zipball/14.0</a>
+Source tarball: <a href="https://github.com/forrestv/p2pool/tarball/14.0">https://github.com/forrestv/p2pool/tarball/14.0</a>
+</pre>
+
+<p>Changes:</p>
+<ul>
+<li>BIP66/block version 3 compatibility</li>
+<li>Requires Bitcoin >=0.10.0 (due to BIP66 compatibility)</li>
+</ul>
+
+<p>BIP66 will take effect in about 2.5 days (as of June 26th) and in order for P2Pool to continue working without producing invalid blocks, everyone needs to upgrade. At 50% of our hashrate upgrading, P2Pool instances will start displaying a warning saying that an upgrade is required. Reaching that point as quickly as possible is very important. And then, at 95%, users that have not upgraded will be excluded. If non-upgraded users aren't excluded before BIP66 takes effect, P2Pool users will be subject to paying other users for invalid work - effectively a withholding attack.</p>
+
+<p>So, please upgrade to 14.0 now and tell everyone else to also.</p>
+
+<p>Events such as this are announced via the <a href="https://groups.google.com/forum/#!forum/p2pool-notifications">P2Pool-notifications mailing list</a>.</p>
+</div>
+
 <div class="boxwhite"><div class="box">
   <h2><a id="what-is-p2pool">What is P2Pool?</a></h2>
   <p>P2Pool is a <a href="https://en.bitcoin.it/wiki/P2Pool">decentralized Bitcoin mining pool</a> that works by creating a peer-to-peer network of miner nodes.</p>
