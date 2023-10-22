@@ -312,25 +312,9 @@ function boxShow(e){
 </div></div>
 
 <div class="box" style="border: 2px solid red;margin-top:1em;padding: 0 1em">
-<h2>URGENT: Upgrade required</h2>
-<p>HARDFORK - Upgrade URGENTLY required in the next few days.</p>
 
-<pre>
-Windows binary: <a href="http://u.forre.st/u/wanckfqm/p2pool_win32_16.0.zip">http://u.forre.st/u/wanckfqm/p2pool_win32_16.0.zip</a>
-Windows binary signature: <a href="http://u.forre.st/u/wqjnuihh/p2pool_win32_16.0.zip.sig">http://u.forre.st/u/wqjnuihh/p2pool_win32_16.0.zip.sig</a>
-Source zipball: <a href="https://github.com/forrestv/p2pool/zipball/16.0">https://github.com/forrestv/p2pool/zipball/16.0</a>
-Source tarball: <a href="https://github.com/forrestv/p2pool/tarball/16.0">https://github.com/forrestv/p2pool/tarball/16.0</a>
-</pre>
 
-<p>Changes:</p>
-<ul>
-<li>CSV compatibility</li>
-<li>Requires Bitcoin >=0.12.1</li>
-</ul>
-
-<p>Several BIPs will take effect in the next few days and in order for P2Pool to continue working without producing invalid blocks, everyone needs to upgrade. At 50% of our hashrate upgrading, P2Pool instances will start displaying a warning saying that an upgrade is required. Reaching that point as quickly as possible is very important. And then, at 95%, users that have not upgraded will be excluded. If non-upgraded users aren't excluded before BIP65 takes effect, P2Pool users will be subject to paying other users for invalid work - effectively a withholding attack.</p>
-
-<p>So, please upgrade to 16.0 now and also tell everyone else to.</p>
+<b>P2Pool release 17.0</b> - commit hash: 62fa7b020b82a92138d7652c26be2953b26fd4e5<br><br><b>HARDFORK</b> - <b>Upgrade URGENTLY required in the next few days.</b><br><br>Windows binary: <a class="ul" href="http://u.forre.st/u/iqvaqprd/p2pool_win32_17.0.zip">http://u.forre.st/u/iqvaqprd/p2pool_win32_17.0.zip</a><br>Windows binary signature: <a class="ul" href="http://u.forre.st/u/ysrjpsls/p2pool_win32_17.0.zip.sig">http://u.forre.st/u/ysrjpsls/p2pool_win32_17.0.zip.sig</a><br>Source zipball: <a class="ul" href="https://github.com/forrestv/p2pool/zipball/17.0">https://github.com/forrestv/p2pool/zipball/17.0</a><br>Source tarball: <a class="ul" href="https://github.com/forrestv/p2pool/tarball/17.0">https://github.com/forrestv/p2pool/tarball/17.0</a><br><br>Changes:<br><br>* SegWit compatibility<br>* Increased new transactions size limit per share to allow producing larger blocks<br>* Requires Bitcoin &gt;= 0.13.1<br><br>SegWit (segregated witness) **has already activated** and for P2Pool to continue working without producing invalid blocks, everyone needs to upgrade. At 50% of our hashrate upgrading, P2Pool instances will start displaying a warning saying that an upgrade is required. Reaching that point as quickly as possible is very important. And then, at 95%, users that have not upgraded will be excluded. If non-upgraded users aren't excluded soon enough, P2Pool users will be subject to paying other users for invalid work - effectively a withholding attack.<br><br>Due to SegWit already activating upgraded users of P2Pool must not mine SegWit transactions as they are incompatible with older P2Pool versions. After v17 shares activate a new release will be made which removes this restriction.<br><br>So, please upgrade to 17.0 now and also tell everyone else to.<br>
 
 <p>Events such as this are announced via the <a href="https://groups.google.com/forum/#!forum/p2pool-notifications">P2Pool-notifications mailing list</a>.</p>
 </div>
